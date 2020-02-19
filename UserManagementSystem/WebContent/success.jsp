@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Success</h1>
+<h1 align="center">You have Successfully registered<a href="index.jsp">Click here</a></h1>
 </body>
 </html>
