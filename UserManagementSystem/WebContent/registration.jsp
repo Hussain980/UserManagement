@@ -11,7 +11,7 @@ table {
 	font-family: serif;
 	
 }
-h2
+h1
 {
   color: blue;
  
@@ -19,7 +19,7 @@ h2
 </style>
 </head>
 <body>
-<h2 align="center">Registration form</h2>
+<h1 align="center">Registration form</h1>
 	<form action="UserServlet" method="post">
 	 <input type="hidden" name="action" value="addUser"> 
 		<table align="center" cellpadding="10" cellspacing="10" border="1">

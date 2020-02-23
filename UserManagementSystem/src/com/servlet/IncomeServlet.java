@@ -54,11 +54,11 @@ public class IncomeServlet extends HttpServlet {
 		double income = Double.parseDouble(request.getParameter("income")) ;
 		String incomeType = request.getParameter("incomeType");
 		String incomeDate = request.getParameter("incomeDate" );
-		String userEmail= request.getParameter("userEmail" );
+		String email= request.getParameter("userEmail" );
 		 i.setIncome(income);
 	     i.setIncomeType(incomeType);
 	     i.setIncomeDate(incomeDate);
-	     i.setUserEmail(userEmail);
+	     i.setEmail(email);
 	     String action  = request.getParameter("action");
 			System.out.println(action);
 			if(action!=null && action.equals("addIncome"))

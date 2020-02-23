@@ -5,7 +5,7 @@ public class Expense {
 	double expense;
 	String expenseType;
 	String expenseDate;
-	String userEmail;
+	String email;
 	public int getExpenseId() {
 		return expenseId;
 	}
@@ -30,16 +30,16 @@ public class Expense {
 	public void setExpenseDate(String expenseDate) {
 		this.expenseDate = expenseDate;
 	}
-	public String getUserEmail() {
-		return userEmail;
+	public String getEmail() {
+		return email;
 	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public String toString() {
 		return "Expense [expenseId=" + expenseId + ", expense=" + expense + ", expenseType=" + expenseType
-				+ ", expenseDate=" + expenseDate + ", userEmail=" + userEmail + "]";
+				+ ", expenseDate=" + expenseDate + ", userEmail=" + email + "]";
 	}
 	
 }

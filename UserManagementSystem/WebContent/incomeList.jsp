@@ -11,6 +11,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1 align="center" style="color: blue;">Income List</h1>
 	<%
    
 List<Income> wl=(List<Income>)session.getAttribute("wlist");
@@ -33,7 +34,7 @@ List<Income> wl=(List<Income>)session.getAttribute("wlist");
 			<td><%=i.getIncome()%></td>
 			<td><%=i.getIncomeType()%></td>
 			<td><%=i.getIncomeDate()%></td>
-			<td><%=i.getUserEmail()%></td>
+			<td><%=i.getEmail()%></td>
 			<td><a href="IncomeServlet?action=edit&incomeId=<%=i.getIncomeId()%>">Edit</a></td>
 			<td><a href="IncomeServlet?action=delete&incomeId=<%=i.getIncomeId()%>">Delete</a></td>
 

@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+<br>
+<br>
 <%	String user = (String) session.getAttribute("user"); %>
 <form action="ExpenseServlet" method="post">
 	<input type="hidden" name="action" value="addExpense"> 

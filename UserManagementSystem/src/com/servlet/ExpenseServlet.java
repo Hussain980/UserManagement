@@ -58,12 +58,12 @@ public class ExpenseServlet extends HttpServlet {
 		double expense= Double.parseDouble(request.getParameter("expense"));
 		String expenseType = request.getParameter("expenseType");
 		String expenseDate = request.getParameter("expenseDate" );
-		String userEmail= request.getParameter("userEmail" );
+		String email= request.getParameter("userEmail" );
 
 		ex.setExpense(expense);
 		ex.setExpenseType(expenseType);
 		ex.setExpenseDate(expenseDate);
-		ex.setUserEmail(userEmail);
+		ex.setEmail(email);
 		String action  = request.getParameter("action");
 		System.out.println(action);
 		if(action!=null && action.equals("addExpense")) {

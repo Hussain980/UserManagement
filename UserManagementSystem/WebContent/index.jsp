@@ -7,6 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <style type="text/css">
+h1{
+  color: maroon;
+  font-family: serif;
+
+}
 
 .main {
   margin-left: 260px; /*160 Same as the width of the sidenav */
@@ -17,7 +22,9 @@
 </style>
 </head>
 <body>
-<img alt="User" src="user.jpg" width="1050" height="600" style="float:right; padding: 20px">
+<h1 align="center">User Management System</h1>
+<hr>
+<img alt="User" src="user.jpg" width="1240" height="620" style="float:right; padding: 20px">
 		<%
 String user=(String)session.getAttribute("user");
 String admin=(String)session.getAttribute("admin");

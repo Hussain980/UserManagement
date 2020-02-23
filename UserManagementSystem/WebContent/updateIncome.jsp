@@ -19,7 +19,7 @@
 			<tr>
 				<td>UserEmail:</td>
 				<td><input type="email" name="userEmail"
-					value="<%=i.getUserEmail()%>" readonly="readonly"></td>
+					value="<%=i.getEmail()%>" readonly="readonly"></td>
 			</tr>
 
 			<tr>

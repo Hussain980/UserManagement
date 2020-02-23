@@ -13,7 +13,7 @@ public class IncomeDao {
 	Connection con = DBConnect.getConnect();
 	 public boolean addIncome(Income i)
 	    {
-	    	String sql = "insert into income (income,incomeType,incomeDate,useremail)values(?,?,?,?)";
+	    	String sql = "insert into income (income,incomeType,incomeDate,email)values(?,?,?,?)";
 	    	
 	    	try
 	        {
@@ -22,7 +22,7 @@ public class IncomeDao {
 	    		ps.setDouble(1, i.getIncome());
 	    		ps.setString(2, i.getIncomeType());
 	    		ps.setString(3, i.getIncomeDate());
-	    		ps.setString(4, i.getUserEmail());
+	    		ps.setString(4, i.getEmail());
 	    		int in =ps.executeUpdate();
 	    		if(in>0)
 	    		{
@@ -39,14 +39,14 @@ public class IncomeDao {
 	 
 	    public boolean updateIncome(Income i) {
 
-			String sql = "update income set income=?,incomeType=? ,incomeDate=?,useremail=? where incomeId=?";
+			String sql = "update income set income=?,incomeType=? ,incomeDate=?,email=? where incomeId=?";
 
 			try {
 				PreparedStatement ps = con.prepareStatement(sql);
 				ps.setDouble(1, i.getIncome());
 				ps.setString(2, i.getIncomeType());
 				ps.setString(3, i.getIncomeDate());
-				ps.setString(4,i.getUserEmail());
+				ps.setString(4,i.getEmail());
 				ps.setInt(5, i.getIncomeId());
 
 				int i1=ps.executeUpdate();
@@ -96,7 +96,7 @@ public class IncomeDao {
 					i.setIncome(rs.getDouble(2));
 					i.setIncomeType(rs.getString(3));
 					i.setIncomeDate(rs.getString(4));
-					i.setUserEmail(rs.getString(5));
+					i.setEmail(rs.getString(5));
 				
 				}
 
@@ -125,7 +125,7 @@ public class IncomeDao {
 	    			i.setIncome(rs.getDouble(2));
 	    			i.setIncomeType(rs.getString(3));
 	    			i.setIncomeDate(rs.getString(4));
-	    			i.setUserEmail(rs.getString(5));
+	    			i.setEmail(rs.getString(5));
 	    			wl.add(i);
 	    		}
 	    		return wl;

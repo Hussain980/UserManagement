@@ -11,6 +11,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<br>
+<br>
+<h1 align="center" style="color: blue;">Expense List</h1>
 	<%
    
 List<Expense> exlist =(List<Expense>)session.getAttribute("exlist");
@@ -33,7 +36,7 @@ List<Expense> exlist =(List<Expense>)session.getAttribute("exlist");
 			<td><%=ex.getExpense()%></td>
 			<td><%=ex.getExpenseType()%></td>
 			<td><%=ex.getExpenseDate()%></td>
-			<td><%=ex.getUserEmail()%></td>
+			<td><%=ex.getEmail()%></td>
 			<td><a href="ExpenseServlet?action=edit&expenseId=<%=ex.getExpenseId()%>">Edit</a></td>
 			<td><a href="ExpenseServlet?action=delete&expenseId=<%=ex.getExpenseId()%>">Delete</a></td>
 

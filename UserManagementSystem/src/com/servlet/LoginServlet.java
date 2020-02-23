@@ -40,6 +40,7 @@ public class LoginServlet extends HttpServlet {
 			session.setAttribute("admin", uname);
 			response.sendRedirect("index.jsp");
 		}
+		
 		else
 		{
 			User b = ld.getUserLogin(uname, pass);
@@ -50,13 +51,17 @@ public class LoginServlet extends HttpServlet {
 				response.sendRedirect("index.jsp");
 
 			}
+			
 			else 
 			{
 				request.setAttribute("lmsg", "Please Enter Valid UserName And Password");
 				RequestDispatcher rd=request.getRequestDispatcher("login.jsp");
 				rd.include(request, response);
 			}
+			
 		}
+		
+
 	}	
 }
 

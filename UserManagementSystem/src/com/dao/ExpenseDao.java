@@ -13,14 +13,14 @@ public class ExpenseDao {
 	Connection con = DBConnect.getConnect();
 	public boolean addExpense(Expense ex)
 	{
-		String sql = "insert into expense(expense,expenseType,expenseDate,userEmail)values(?,?,?,?)";
+		String sql = "insert into expense(expense,expenseType,expenseDate,email)values(?,?,?,?)";
 		try
 		{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setDouble(1, ex.getExpense());
 			ps.setString(2, ex.getExpenseType());
 			ps.setString(3, ex.getExpenseDate());
-			ps.setString(4, ex.getUserEmail());
+			ps.setString(4, ex.getEmail());
 			int i = ps.executeUpdate();
 			if(i>0)
 			{
@@ -38,14 +38,14 @@ public class ExpenseDao {
 	
 	 public boolean updateExpense(Expense ex) {
 
-			String sql = "update expense set expense=?,expenseType=? ,expenseDate=?,useremail=? where expenseId=?";
+			String sql = "update expense set expense=?,expenseType=? ,expenseDate=?,email=? where expenseId=?";
 
 			try {
 				PreparedStatement ps = con.prepareStatement(sql);
 				ps.setDouble(1, ex.getExpense());
 				ps.setString(2, ex.getExpenseType());
 				ps.setString(3, ex.getExpenseDate());
-				ps.setString(4,ex.getUserEmail());
+				ps.setString(4,ex.getEmail());
 				ps.setInt(5, ex.getExpenseId());
 
 				int i1=ps.executeUpdate();
@@ -94,7 +94,7 @@ public class ExpenseDao {
 					ex.setExpense(rs.getDouble(2));
 					ex.setExpenseType(rs.getString(3));
 					ex.setExpenseDate(rs.getString(4));
-					ex.setUserEmail(rs.getString(5));
+					ex.setEmail(rs.getString(5));
 				
 				}
 
@@ -122,7 +122,7 @@ public class ExpenseDao {
 				ex.setExpense(rs.getDouble(2));
 				ex.setExpenseType(rs.getString(3));
 				ex.setExpenseDate(rs.getString(4));
-				ex.setUserEmail(rs.getString(5));
+				ex.setEmail(rs.getString(5));
 				exlist.add(ex);
 			}
 			return exlist;
